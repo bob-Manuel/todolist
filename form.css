@@ -1,0 +1,42 @@
+* {
+  margin: 0%;
+  padding: 0%;
+}
+form {
+  height: 100vh;
+  display: grid;
+  justify-items: center;
+  align-content: center;
+  gap: 5px;
+  background-color: slategrey;
+}
+
+main {
+  display: flex;
+  height: 100vh;
+}
+aside,
+section,
+header {
+  border: 1px solid black;
+}
+
+aside {
+  width: 20vw;
+}
+.main {
+  width: 80vw;
+}
+header {
+  height: 10vh;
+}
+.body {
+  height: 90vw;
+}
+h1 {
+  margin: 20px;
+}
+small {
+  color: red;
+  display: none;
+}

@@ -1,0 +1,11 @@
+section {
+  padding: 50px;
+  border: 1px solid black;
+  margin-bottom: 20px;
+}
+fieldset {
+  display: grid;
+  gap: 10;
+  padding: 30px;
+  margin: 20px 0px;
+}

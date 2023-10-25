@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="form.css" />
+    <title>Document</title>
+  </head>
+  <body>
+    <form onsubmit="click">
+      <label for="name">Whats your name?</label>
+      <input type="text" class="input" />
+      <small class="small">Enter your Name</small>
+      <button class="btn">Submit</button>
+    </form>
+    <script>
+      const button = document.querySelector(".btn");
+
+      button.addEventListener("click", function (event) {
+        event.preventDefault();
+        let input = document.querySelector(".input");
+        let small = document.querySelector(".small");
+
+        if (input.value === "") {
+          input.style.border = "1px solid red";
+          small.style.display = "block";
+          setTimeout(() => {
+            input.style.border = "none";
+            small.style.display = "none";
+          }, 2000);
+        } else {
+          localStorage.setItem("name", input.value);
+          button.innerText = "Loading...";
+          setTimeout(() => {
+            location.href = "login.html";
+          }, 2000);
+          input.value = "";
+        }
+      });
+    </script>
+  </body>
+</html>
